@@ -4,14 +4,12 @@ import {Category} from '../models/category';
 export const categoriesRouter = express.Router();
 
 categoriesRouter.get(`/`, async (req, res) => {
-    categoriesRouter.get(`/`, async (req, res) => {
-        const categoryList = await Category.find();
+    const categoryList = await Category.find();
 
-        if (!categoryList) {
-            res.status(500).json({success: false})
-        }
-        res.send(categoryList);
-    });
+    if (!categoryList) {
+        res.status(500).json({success: false})
+    }
+    res.send(categoryList);
 });
 
 categoriesRouter.get('/:id', async (req, res) => {

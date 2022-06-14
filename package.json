@@ -1,0 +1,15 @@
+{
+  "name": "shop-app-project",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "client": "cd backend && npm install && npm start",
+    "server": "cd frontend && npm install && npm start --android",
+    "start": "concurrently  \"npm run client\" \"npm run server\""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "private": true
+}
